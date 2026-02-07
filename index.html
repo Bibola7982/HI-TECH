@@ -228,5 +228,74 @@ footer{text-align:center;padding:20px;color:#777}
 
 <a class="float" href="https://wa.me/918607777717">💬</a>
 
+
+    <script>
+/* DARK MODE */
+const toggle = document.createElement("button");
+toggle.innerHTML = "🌙";
+toggle.style.position="fixed";
+toggle.style.top="90px";
+toggle.style.right="20px";
+toggle.style.padding="10px 14px";
+toggle.style.borderRadius="50%";
+toggle.style.border="none";
+toggle.style.background="#000";
+toggle.style.color="#fff";
+toggle.style.cursor="pointer";
+document.body.appendChild(toggle);
+
+toggle.onclick = () => {
+ document.body.classList.toggle("dark");
+};
+
+/* SCROLL ANIMATION */
+const sections = document.querySelectorAll(".section");
+const reveal = () => {
+ sections.forEach(sec=>{
+  const top = sec.getBoundingClientRect().top;
+  if(top < window.innerHeight-100){
+   sec.style.opacity=1;
+   sec.style.transform="translateY(0)";
+  }
+ });
+}
+sections.forEach(s=>{
+ s.style.opacity=0;
+ s.style.transform="translateY(40px)";
+ s.style.transition="0.6s";
+});
+window.addEventListener("scroll", reveal);
+
+/* BOOKING TO WHATSAPP */
+const form = document.querySelector("form");
+if(form){
+form.onsubmit = e =>{
+ e.preventDefault();
+ let name=form[0].value;
+ let phone=form[1].value;
+ let model=form[2].value;
+ let problem=form[3].value;
+ let msg=`Repair Booking%0AName: ${name}%0APhone: ${phone}%0AModel: ${model}%0AProblem: ${problem}`;
+ window.open("https://wa.me/918607777717?text="+msg,"_blank");
+}
+}
+</script>
+
+<style>
+/* DARK MODE STYLE */
+body.dark{
+ background:#121212;
+ color:#eee;
+}
+body.dark .section{
+ background:#1f1f1f;
+ color:#eee;
+}
+body.dark nav{
+ background:#1a1a1a;
+}
+</style>
+
+
 </body>
 </html>
