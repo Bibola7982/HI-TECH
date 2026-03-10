@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Admin Panel</title>
+
+<style>
+
+body{font-family:Arial;padding:40px}
+
+input{
+display:block;
+margin-bottom:10px;
+padding:10px;
+width:300px;
+}
+
+button{
+padding:10px 20px;
+background:#0a8f08;
+color:white;
+border:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Add / Update Phone</h2>
+
+<input id="model" placeholder="Phone Model">
+<input id="display" placeholder="Display Price">
+<input id="battery" placeholder="Battery Price">
+<input id="camera" placeholder="Camera Price">
+
+<button onclick="save()">Save</button>
+
+
+<script>
+
+function save(){
+
+let model=document.getElementById("model").value;
+
+let display=document.getElementById("display").value;
+
+let battery=document.getElementById("battery").value;
+
+let camera=document.getElementById("camera").value;
+
+let data={display,battery,camera};
+
+localStorage.setItem(model,JSON.stringify(data));
+
+alert("Saved");
+
+}
+
+</script>
+
+</body>
+</html>
