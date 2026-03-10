@@ -1,119 +1,292 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Phone Repair Price</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hitech Mobile & Repair</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-body{
-font-family: Arial;
-background:#f5f5f5;
-margin:0;
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{background:#f4f6f8;color:#333;}
+
+html{scroll-behavior:smooth}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#fff;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+z-index:999;
 }
 
-header{
-background:#111;
-color:white;
-padding:15px;
+.nav{
+max-width:1100px;
+margin:auto;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.nav h2{color:#0a8f08}
+
+.nav a{text-decoration:none;color:#333;margin-left:18px;font-weight:500}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url("https://images.unsplash.com/photo-1580910051074-3eb694886505");
+background-size:cover;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
 text-align:center;
 }
 
-.search-box{
-text-align:center;
-margin:30px;
+.hero h1{font-size:46px}
+
+.hero a{
+padding:14px 32px;
+background:#0a8f08;
+color:#fff;
+border-radius:30px;
+text-decoration:none;
 }
 
-input{
-padding:10px;
+/* SECTION */
+
+.container{max-width:1100px;margin:auto;padding:80px 20px}
+
+.section{
+background:#fff;
+padding:40px;
+margin-bottom:40px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.section h2{text-align:center;color:#0a8f08;margin-bottom:25px}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.box{
+padding:25px;
+border:1px solid #ddd;
+border-radius:12px;
+text-align:center;
+}
+
+/* SEARCH */
+
+.search{
+text-align:center;
+margin-bottom:20px;
+}
+
+.search input{
+padding:12px;
 width:250px;
-border-radius:5px;
+border-radius:8px;
 border:1px solid #ccc;
 }
 
-button{
-padding:10px 15px;
-background:#28a745;
+.search button{
+padding:12px 20px;
+background:#0a8f08;
 color:white;
 border:none;
-border-radius:5px;
+border-radius:8px;
 cursor:pointer;
 }
 
 .result{
-background:white;
-width:90%;
-max-width:500px;
-margin:auto;
+margin-top:20px;
 padding:20px;
+border:1px solid #ddd;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-.whatsapp{
-background:#25D366;
-margin-top:10px;
+/* FORM */
+
+form input,form textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+form button{
+width:100%;
+padding:14px;
+background:#0a8f08;
+color:#fff;
+border:none;
+border-radius:30px;
+}
+
+/* CONTACT */
+
+.buttons a{
 display:inline-block;
-padding:10px 15px;
-color:white;
-text-decoration:none;
-border-radius:5px;
-}
-
-.phone-list{
-margin:40px;
-}
-
-.phone-card{
-background:white;
-padding:20px;
 margin:10px;
-border-radius:10px;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+color:#fff;
 }
+
+.call{background:#0a8f08}
+.whatsapp{background:#25D366}
+
+/* FLOAT */
+
+.float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:15px 18px;
+border-radius:50%;
+font-size:24px;
+text-decoration:none;
+}
+
+/* DARK */
+
+body.dark{background:#121212;color:#eee}
+body.dark .section{background:#1f1f1f}
+body.dark nav{background:#1a1a1a}
 
 </style>
 </head>
 
 <body>
 
-<header>
-<h2>Mobile Repair Price Finder</h2>
-</header>
+<nav>
+<div class="nav">
+<h2>Hitech Mobile</h2>
+<div>
+<a href="#services">Services</a>
+<a href="#search">Repair Price</a>
+<a href="#booking">Booking</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
 
-<div class="search-box">
+<section class="hero">
+<div>
+<h1>Hitech Mobile & Repair</h1>
+<p>Phone Repair • Buy & Sell Mobile • Accessories</p>
+<a href="tel:8607777717">Call Now</a>
+</div>
+</section>
 
-<input type="text" id="model" placeholder="Enter Phone Model">
+<div class="container">
+
+<div class="section" id="services">
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="box">📱 New Mobile Sale</div>
+<div class="box">♻ Buy / Sell Used Phones</div>
+<div class="box">🔧 Phone Repair</div>
+<div class="box">🎧 Accessories</div>
+
+</div>
+</div>
+
+<div class="section" id="search">
+
+<h2>Find Repair Price</h2>
+
+<div class="search">
+
+<input id="model" placeholder="Enter phone model">
+
 <button onclick="searchPhone()">Search</button>
 
 </div>
 
 <div id="result"></div>
 
-<div class="phone-list">
-
-<h3>Available Phones</h3>
-
-<div class="phone-card">
-<h4>iPhone 12</h4>
-<p>Price: ₹35000</p>
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">WhatsApp Enquiry</a>
 </div>
 
-<div class="phone-card">
-<h4>Samsung S21</h4>
-<p>Price: ₹28000</p>
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">WhatsApp Enquiry</a>
+<div class="section" id="booking">
+
+<h2>Repair Booking</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="tel" placeholder="Mobile Number">
+
+<input type="text" placeholder="Phone Model">
+
+<textarea placeholder="Problem"></textarea>
+
+<button>Submit Booking</button>
+
+</form>
+
+</div>
+
+<div class="section" id="contact">
+
+<h2>Contact</h2>
+
+<div class="buttons">
+
+<a class="call" href="tel:8607777717">Call</a>
+
+<a class="whatsapp" href="https://wa.me/918607777717">WhatsApp</a>
+
 </div>
 
 </div>
+
+</div>
+
+<a class="float" href="https://wa.me/918607777717">💬</a>
 
 <script>
 
-const phones = {
+/* PHONE DATABASE */
+
+const phones={
 
 "iphone 11 pro":{
 display:"₹6500",
 battery:"₹2500",
 camera:"₹3000"
+},
+
+"iphone 12":{
+display:"₹7500",
+battery:"₹2800",
+camera:"₹3500"
 },
 
 "samsung s21":{
@@ -126,35 +299,81 @@ camera:"₹2800"
 
 function searchPhone(){
 
-let model = document.getElementById("model").value.toLowerCase();
+let model=document.getElementById("model").value.toLowerCase();
 
-let result = document.getElementById("result");
+let result=document.getElementById("result");
 
 if(phones[model]){
 
-result.innerHTML = `
+result.innerHTML=`
+
 <div class="result">
 
 <h3>${model}</h3>
 
 <p>Display: ${phones[model].display}</p>
+
 <p>Battery: ${phones[model].battery}</p>
+
 <p>Camera: ${phones[model].camera}</p>
 
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">
+<a class="whatsapp" href="https://wa.me/918607777717?text=Hello%20I%20need%20repair%20for%20${model}">
+
 Consult on WhatsApp
+
 </a>
 
 </div>
+
 `;
 
 }else{
 
-result.innerHTML="<p style='text-align:center'>Model not found</p>";
+result.innerHTML="<p>Model not found</p>";
 
 }
 
 }
+
+/* BOOKING FORM */
+
+const form=document.querySelector("form");
+
+form.onsubmit=e=>{
+
+e.preventDefault();
+
+let name=form[0].value;
+
+let phone=form[1].value;
+
+let model=form[2].value;
+
+let problem=form[3].value;
+
+let msg=`Repair Booking%0AName:${name}%0APhone:${phone}%0AModel:${model}%0AProblem:${problem}`;
+
+window.open("https://wa.me/918607777717?text="+msg);
+
+};
+
+/* DARK MODE */
+
+const toggle=document.createElement("button");
+
+toggle.innerHTML="🌙";
+
+toggle.style.position="fixed";
+
+toggle.style.top="90px";
+
+toggle.style.right="20px";
+
+toggle.style.padding="10px";
+
+document.body.appendChild(toggle);
+
+toggle.onclick=()=>{document.body.classList.toggle("dark")}
 
 </script>
 
