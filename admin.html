@@ -1,64 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>Admin Panel</title>
-
-<style>
-
-body{font-family:Arial;padding:40px}
-
-input{
-display:block;
-margin-bottom:10px;
-padding:10px;
-width:300px;
-}
-
-button{
-padding:10px 20px;
-background:#0a8f08;
-color:white;
-border:none;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | Hitech</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-panel { padding: 50px; }
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .data-table th, .data-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    </style>
 </head>
-
 <body>
-
-<h2>Add / Update Phone</h2>
-
-<input id="model" placeholder="Phone Model">
-<input id="display" placeholder="Display Price">
-<input id="battery" placeholder="Battery Price">
-<input id="camera" placeholder="Camera Price">
-
-<button onclick="save()">Save</button>
-
-
-<script>
-
-function save(){
-
-let model=document.getElementById("model").value;
-
-let display=document.getElementById("display").value;
-
-let battery=document.getElementById("battery").value;
-
-let camera=document.getElementById("camera").value;
-
-let data={display,battery,camera};
-
-localStorage.setItem(model,JSON.stringify(data));
-
-alert("Saved");
-
-}
-
-</script>
-
+    <div class="admin-panel">
+        <h1>Admin Dashboard</h1>
+        <div class="form-card">
+            <h3>Add New Repair Model</h3>
+            <input type="text" id="new-model" placeholder="Model Name">
+            <input type="number" id="new-price" placeholder="Display Price">
+            <button onclick="saveData()" class="btn-primary">Add Model</button>
+        </div>
+        
+        <table class="data-table">
+            <thead>
+                <tr><th>Model</th><th>Price</th><th>Action</th></tr>
+            </thead>
+            <tbody id="admin-list"></tbody>
+        </table>
+    </div>
+    <script>
+        // Simple Admin Logic
+        function loadTable() {
+            const list = document.getElementById('admin-list');
+            list.innerHTML = '<tr><td>iPhone 15</td><td>₹5000</td><td><button>Delete</button></td></tr>';
+        }
+        loadTable();
+    </script>
 </body>
 </html>
