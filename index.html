@@ -1,301 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hitech Mobile & Repair | Phone Repair & Mobile Shop</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Hitech Mobile Repair</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-body{
-    background:#f4f6f8;
-    color:#333;
-}
-html{scroll-behavior:smooth}
+<meta name="description" content="Mobile repair shop, screen replacement, battery change, phone repair near me">
+<meta name="keywords" content="iphone repair, samsung repair, mobile repair shop">
 
-/* NAVBAR */
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#fff;
-    box-shadow:0 4px 10px rgba(0,0,0,.1);
-    z-index:999;
-}
-.nav{
-    max-width:1100px;
-    margin:auto;
-    padding:15px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-.nav h2{color:#0a8f08}
-.nav a{text-decoration:none;color:#333;margin-left:18px;font-weight:500}
+<link rel="stylesheet" href="style.css">
 
-/* HERO */
-.hero{
-    height:100vh;
-    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-    url("https://images.unsplash.com/photo-1580910051074-3eb694886505");
-    background-size:cover;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    text-align:center;
-}
-.hero h1{font-size:46px}
-.hero p{margin:15px 0 30px}
-.hero a{
-    padding:14px 32px;
-    background:#0a8f08;
-    color:#fff;
-    border-radius:30px;
-    text-decoration:none;
-}
-
-/* SECTIONS */
-.container{max-width:1100px;margin:auto;padding:80px 20px}
-.section{
-    background:#fff;
-    padding:40px;
-    margin-bottom:40px;
-    border-radius:15px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
-.section h2{text-align:center;color:#0a8f08;margin-bottom:25px}
-
-/* SERVICES */
-.services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-.box{
-    padding:25px;
-    border:1px solid #ddd;
-    border-radius:12px;
-    text-align:center;
-}
-
-/* PRICE */
-.price p{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed #ccc}
-
-/* REVIEWS */
-.review{
-    background:#f9f9f9;
-    padding:20px;
-    border-radius:12px;
-}
-
-/* FORM */
-form input,form textarea{
-    width:100%;
-    padding:12px;
-    margin-bottom:15px;
-    border-radius:8px;
-    border:1px solid #ccc;
-}
-form button{
-    width:100%;
-    padding:14px;
-    background:#0a8f08;
-    color:#fff;
-    border:none;
-    border-radius:30px;
-    font-size:16px;
-}
-
-/* CONTACT BUTTONS */
-.buttons a{
-    display:inline-block;
-    margin:10px;
-    padding:12px 25px;
-    border-radius:30px;
-    text-decoration:none;
-    color:#fff;
-}
-.call{background:#0a8f08}
-.whatsapp{background:#25D366}
-.map{background:#555}
-
-/* WHATSAPP FLOAT */
-.float{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:#fff;
-    padding:15px 18px;
-    border-radius:50%;
-    font-size:24px;
-    text-decoration:none;
-}
-
-/* FOOTER */
-footer{text-align:center;padding:20px;color:#777}
-
-@media(max-width:600px){
-.hero h1{font-size:32px}
-}
-</style>
 </head>
 
 <body>
 
-<nav>
-<div class="nav">
-<h2>Hitech Mobile</h2>
-<div>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#booking">Booking</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
-</nav>
+<header>
 
-<section class="hero">
-<div>
 <h1>Hitech Mobile & Repair</h1>
-<p>Phone Repair • Buy & Sell Mobile • Accessories</p>
-<a href="tel:8607777717">Call Now</a>
-</div>
+
+<input id="search" placeholder="Search phone model">
+
+<div id="suggestions"></div>
+
+</header>
+
+
+<section class="container">
+
+<h2>Repair Price</h2>
+
+<div id="result"></div>
+
 </section>
 
-<div class="container">
 
-<div class="section" id="about">
-<h2>About Us</h2>
-<p style="text-align:center">Trusted mobile repair shop with expert technicians and fast service.</p>
-</div>
+<section class="container">
 
-<div class="section" id="services">
-<h2>Our Services</h2>
-<div class="services">
-<div class="box">📱 New Mobile Sale</div>
-<div class="box">♻ Buy / Sell Used Phones</div>
-<div class="box">🔧 Phone Repair</div>
-<div class="box">🎧 Accessories</div>
-</div>
-</div>
+<h2>Phones For Sale</h2>
 
-<div class="section price">
-<h2>Repair Price List</h2>
-<p><span>Screen Replacement</span><span>₹999+</span></p>
-<p><span>Battery Change</span><span>₹599+</span></p>
-<p><span>Charging Port</span><span>₹499+</span></p>
-</div>
+<div class="phone">
 
-<div class="section">
-<h2>Customer Reviews</h2>
-<div class="review">⭐⭐⭐⭐⭐ Excellent service & fast repair!</div>
-</div>
+<h3>iPhone 13</h3>
+<p>Price ₹42000</p>
 
-<div class="section" id="booking">
-<h2>Repair Booking</h2>
-<form>
-<input type="text" placeholder="Your Name">
-<input type="tel" placeholder="Mobile Number">
-<input type="text" placeholder="Phone Model">
-<textarea placeholder="Problem"></textarea>
-<button>Submit Booking</button>
-</form>
-</div>
-
-<div class="section" id="contact">
-<h2>Contact Us</h2>
-<p>📍 Your City Name</p>
-<p>🕒 9 AM – 9 PM (All Days)</p>
-<div class="buttons">
-<a class="call" href="tel:8607777717">Call</a>
-<a class="whatsapp" href="https://wa.me/918607777717">WhatsApp</a>
-<a class="map" href="#">Directions</a>
-</div>
-</div>
+<a href="https://wa.me/918607777717?text=I want to buy iPhone 13">WhatsApp</a>
 
 </div>
 
-<footer>© 2026 Hitech Mobile & Repair</footer>
+<div class="phone">
 
-<a class="float" href="https://wa.me/918607777717">💬</a>
+<h3>Samsung S22</h3>
+<p>Price ₹35000</p>
+
+<a href="https://wa.me/918607777717?text=I want to buy Samsung S22">WhatsApp</a>
+
+</div>
+
+</section>
 
 
-    <script>
-/* DARK MODE */
-const toggle = document.createElement("button");
-toggle.innerHTML = "🌙";
-toggle.style.position="fixed";
-toggle.style.top="90px";
-toggle.style.right="20px";
-toggle.style.padding="10px 14px";
-toggle.style.borderRadius="50%";
-toggle.style.border="none";
-toggle.style.background="#000";
-toggle.style.color="#fff";
-toggle.style.cursor="pointer";
-document.body.appendChild(toggle);
+<section class="container">
 
-toggle.onclick = () => {
- document.body.classList.toggle("dark");
-};
+<h2>Shop Location</h2>
 
-/* SCROLL ANIMATION */
-const sections = document.querySelectorAll(".section");
-const reveal = () => {
- sections.forEach(sec=>{
-  const top = sec.getBoundingClientRect().top;
-  if(top < window.innerHeight-100){
-   sec.style.opacity=1;
-   sec.style.transform="translateY(0)";
-  }
- });
-}
-sections.forEach(s=>{
- s.style.opacity=0;
- s.style.transform="translateY(40px)";
- s.style.transition="0.6s";
-});
-window.addEventListener("scroll", reveal);
+<iframe
+src="https://www.google.com/maps?q=Delhi&output=embed"
+width="100%"
+height="300">
+</iframe>
 
-/* BOOKING TO WHATSAPP */
-const form = document.querySelector("form");
-if(form){
-form.onsubmit = e =>{
- e.preventDefault();
- let name=form[0].value;
- let phone=form[1].value;
- let model=form[2].value;
- let problem=form[3].value;
- let msg=`Repair Booking%0AName: ${name}%0APhone: ${phone}%0AModel: ${model}%0AProblem: ${problem}`;
- window.open("https://wa.me/918607777717?text="+msg,"_blank");
-}
-}
-</script>
+</section>
 
-<style>
-/* DARK MODE STYLE */
-body.dark{
- background:#121212;
- color:#eee;
-}
-body.dark .section{
- background:#1f1f1f;
- color:#eee;
-}
-body.dark nav{
- background:#1a1a1a;
-}
-</style>
 
+<footer>
+
+<p>© Hitech Mobile Repair</p>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
