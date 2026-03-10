@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Phone Repair Price</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f5f5f5;
+margin:0;
+}
+
+header{
+background:#111;
+color:white;
+padding:15px;
+text-align:center;
+}
+
+.search-box{
+text-align:center;
+margin:30px;
+}
+
+input{
+padding:10px;
+width:250px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+padding:10px 15px;
+background:#28a745;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.result{
+background:white;
+width:90%;
+max-width:500px;
+margin:auto;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.whatsapp{
+background:#25D366;
+margin-top:10px;
+display:inline-block;
+padding:10px 15px;
+color:white;
+text-decoration:none;
+border-radius:5px;
+}
+
+.phone-list{
+margin:40px;
+}
+
+.phone-card{
+background:white;
+padding:20px;
+margin:10px;
+border-radius:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Mobile Repair Price Finder</h2>
+</header>
+
+<div class="search-box">
+
+<input type="text" id="model" placeholder="Enter Phone Model">
+<button onclick="searchPhone()">Search</button>
+
+</div>
+
+<div id="result"></div>
+
+<div class="phone-list">
+
+<h3>Available Phones</h3>
+
+<div class="phone-card">
+<h4>iPhone 12</h4>
+<p>Price: ₹35000</p>
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">WhatsApp Enquiry</a>
+</div>
+
+<div class="phone-card">
+<h4>Samsung S21</h4>
+<p>Price: ₹28000</p>
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">WhatsApp Enquiry</a>
+</div>
+
+</div>
+
+<script>
+
+const phones = {
+
+"iphone 11 pro":{
+display:"₹6500",
+battery:"₹2500",
+camera:"₹3000"
+},
+
+"samsung s21":{
+display:"₹5500",
+battery:"₹2200",
+camera:"₹2800"
+}
+
+};
+
+function searchPhone(){
+
+let model = document.getElementById("model").value.toLowerCase();
+
+let result = document.getElementById("result");
+
+if(phones[model]){
+
+result.innerHTML = `
+<div class="result">
+
+<h3>${model}</h3>
+
+<p>Display: ${phones[model].display}</p>
+<p>Battery: ${phones[model].battery}</p>
+<p>Camera: ${phones[model].camera}</p>
+
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">
+Consult on WhatsApp
+</a>
+
+</div>
+`;
+
+}else{
+
+result.innerHTML="<p style='text-align:center'>Model not found</p>";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
