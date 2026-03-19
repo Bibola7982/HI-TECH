@@ -1,74 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hitech Mobile & Repair | Expert Smartphone Solutions</title>
-    <meta name="description" content="Professional mobile repair for Apple, Samsung, Xiaomi. Get instant price quotes and book online.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hitech Mobile & Repair</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Hitech <span>Mobile</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#repair">Repair Finder</a></li>
-            <li><a href="#store">Store</a></li>
-            <li><a href="#booking">Book Repair</a></li>
-            <li><button id="theme-toggle"><i class="fas fa-moon"></i></button></li>
-        </ul>
-    </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Expert Repairs. <br><span>Guaranteed Quality.</span></h1>
-            <p>We fix iPhones, Samsung, and more in under 60 minutes.</p>
-            <a href="#repair" class="btn-primary">Find Repair Price</a>
-        </div>
-    </section>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Hitech <span>Mobile</span></div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#repair">Repair</a></li>
+        <li><a href="#booking">Book</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle"><i class="fas fa-moon"></i></button></li>
+    </ul>
+</nav>
 
-    <section id="repair" class="search-section">
-        <h2>Repair Price Finder</h2>
-        <div class="search-container">
-            <input type="text" id="phone-search" placeholder="Type your phone model (e.g. iPhone 15)...">
-            <div id="suggestions" class="suggestions-box"></div>
-        </div>
-        <div id="price-results" class="price-card-container">
-            </div>
-    </section>
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Fast Mobile Repair</h1>
+        <p>iPhone | Samsung | Xiaomi Repair in 60 Minutes</p>
+        <a href="#booking" class="btn-primary">Book Now</a>
+    </div>
+</section>
 
-    <section id="store" class="store-section">
-        <h2>Available for Sale</h2>
-        <div class="product-grid" id="product-grid"></div>
-    </section>
+<!-- REPAIR SEARCH -->
+<section id="repair" class="section">
+    <h2>Repair Price Finder</h2>
+    <input type="text" id="search" placeholder="Enter phone model...">
+    <div id="results"></div>
+</section>
 
-    <section id="booking" class="booking-section">
-        <div class="form-card">
-            <h2>Book a Repair</h2>
-            <form id="repair-form">
-                <input type="text" id="cust-name" placeholder="Your Name" required>
-                <input type="text" id="cust-phone" placeholder="Phone Number" required>
-                <input type="text" id="cust-model" placeholder="Phone Model" required>
-                <textarea id="cust-issue" placeholder="Describe the problem"></textarea>
-                <button type="submit" class="btn-submit">Book via WhatsApp</button>
-            </form>
-        </div>
-    </section>
+<!-- BOOKING -->
+<section id="booking" class="section">
+    <h2>Book Repair</h2>
+    <form id="form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <input type="text" id="model" placeholder="Phone Model" required>
+        <textarea id="issue" placeholder="Problem"></textarea>
+        <button type="submit">Book via WhatsApp</button>
+    </form>
+</section>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937371434!2d-73.98731968459391!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1647300000000!5m2!1sen!2sus" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-        <p>&copy; 2026 Hitech Mobile & Repair. All rights reserved.</p>
-    </footer>
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <p><i class="fas fa-map-marker-alt"></i> Hansi, Haryana</p>
+    <p><i class="fas fa-clock"></i> 9 AM – 9 PM</p>
 
-    <a href="https://wa.me/1234567890" class="floating-wa" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <div class="contact-buttons">
+        <a href="tel:8607777717" class="btn call">Call</a>
+        <a href="https://wa.me/918607777717" class="btn whatsapp">WhatsApp</a>
+        <a href="#" class="btn map">Directions</a>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Hitech Mobile Repair</p>
+</footer>
+
+<!-- FLOATING BUTTON -->
+<a href="https://wa.me/918607777717" class="floating-wa">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="script.js"></script>
 </body>
 </html>
