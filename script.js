@@ -1,20 +1,23 @@
-// SEARCH DEMO DATA
-const phones = [
-    "iPhone 13 Screen - ₹5000",
-    "Samsung S21 Battery - ₹3000",
-    "Redmi Note 10 Display - ₹2500"
+const data = [
+    { name: "iPhone 13 Screen", price: "₹5000" },
+    { name: "Samsung S21 Battery", price: "₹3000" },
+    { name: "Redmi Note 10 Display", price: "₹2500" }
 ];
 
-document.getElementById("search").addEventListener("input", function() {
+document.getElementById("search").addEventListener("input", function () {
     let value = this.value.toLowerCase();
-    let results = phones.filter(p => p.toLowerCase().includes(value));
+    let results = data.filter(item => item.name.toLowerCase().includes(value));
 
     document.getElementById("results").innerHTML =
-        results.map(r => `<p>${r}</p>`).join("");
+        results.map(item => `
+            <div class="card">
+                <h3>${item.name}</h3>
+                <p>${item.price}</p>
+            </div>
+        `).join("");
 });
 
-// WHATSAPP BOOKING
-document.getElementById("form").addEventListener("submit", function(e) {
+document.getElementById("form").addEventListener("submit", function(e){
     e.preventDefault();
 
     let name = document.getElementById("name").value;
@@ -24,5 +27,5 @@ document.getElementById("form").addEventListener("submit", function(e) {
 
     let msg = `Name: ${name}%0APhone: ${phone}%0AModel: ${model}%0AIssue: ${issue}`;
 
-    window.open(`https://wa.me/918607777717?text=${msg}`, "_blank");
+    window.open(`https://wa.me/918607777717?text=${msg}`);
 });
