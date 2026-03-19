@@ -157,3 +157,106 @@ footer {
         width: 90%;
     }
 }
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f8fafc;
+}
+
+/* NAV */
+.navbar {
+    background: #0f172a;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(#0f172a, #1e293b);
+    color: white;
+    text-align: center;
+    padding: 40px 10px;
+}
+
+/* SECTION */
+.section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* MODELS */
+.model-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.model-list button {
+    padding: 10px;
+    border: none;
+    background: #22c55e;
+    color: white;
+    border-radius: 20px;
+}
+
+/* SEARCH */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.card {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* FORM */
+.dark {
+    background: #0f172a;
+    color: white;
+}
+
+form input, textarea {
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background: #22c55e;
+    color: white;
+    border: none;
+}
+
+/* CONTACT */
+.btns a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+}
+
+/* FLOAT */
+.float {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: green;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+}
