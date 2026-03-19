@@ -14,71 +14,61 @@
 <!-- NAVBAR -->
 <nav class="navbar">
     <div class="logo">Hitech <span>Mobile</span></div>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#repair">Repair</a></li>
-        <li><a href="#booking">Book</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
 </nav>
 
 <!-- HERO -->
-<section id="home" class="hero">
-    <div class="hero-box">
-        <h1>Expert Repairs.<br><span>Guaranteed Quality.</span></h1>
-        <p>We fix iPhones, Samsung, and more in under 60 minutes.</p>
-        <a href="#repair" class="btn">Find Repair Price</a>
+<section class="hero">
+    <h1>Mobile Repair in 60 Minutes</h1>
+    <p>iPhone • Samsung • Vivo • Oppo • Realme</p>
+</section>
+
+<!-- POPULAR MODELS -->
+<section class="section">
+    <h2>Popular Models</h2>
+
+    <div class="model-list">
+        <button onclick="quickSearch('iPhone 13')">iPhone 13</button>
+        <button onclick="quickSearch('iPhone 14')">iPhone 14</button>
+        <button onclick="quickSearch('Samsung S21')">S21</button>
+        <button onclick="quickSearch('Vivo V25')">Vivo V25</button>
+        <button onclick="quickSearch('Oppo A78')">Oppo A78</button>
+        <button onclick="quickSearch('Realme Narzo')">Realme</button>
     </div>
 </section>
 
-<!-- REPAIR -->
-<section id="repair" class="section">
-    <h2>Repair Price Finder</h2>
-
-    <div class="search-box">
-        <input type="text" id="search" placeholder="Type your phone model...">
-    </div>
-
-    <div id="results" class="card-container"></div>
+<!-- SEARCH -->
+<section class="section">
+    <h2>Find Repair Price</h2>
+    <input type="text" id="search" placeholder="Type phone model...">
+    <div id="results" class="grid"></div>
 </section>
 
-<!-- BOOKING -->
-<section id="booking" class="section dark">
-    <h2>Book a Repair</h2>
+<!-- BOOK -->
+<section class="section dark">
+    <h2>Book Repair</h2>
 
-    <form id="form" class="form-card">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="text" id="phone" placeholder="Phone Number" required>
-        <input type="text" id="model" placeholder="Phone Model" required>
-        <textarea id="issue" placeholder="Describe problem"></textarea>
-        <button type="submit">Book via WhatsApp</button>
+    <form id="form">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="phone" placeholder="Phone" required>
+        <input type="text" id="model" placeholder="Model" required>
+        <textarea id="issue" placeholder="Problem"></textarea>
+        <button>Book on WhatsApp</button>
     </form>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section contact">
-    <h2>Contact Us</h2>
+<section class="section contact">
+    <h2>Contact</h2>
+    <p>📍 Near Auto Market, Hansi</p>
 
-    <p><i class="fas fa-map-marker-alt"></i> Near Auto Market, Hansi Market, Hansi, Haryana - 125033</p>
-    <p><i class="fas fa-phone"></i> +91 86077 77717</p>
-    <p><i class="fas fa-clock"></i> 9 AM – 9 PM</p>
-
-    <div class="contact-buttons">
-        <a href="tel:8607777717" class="btn call">Call</a>
-        <a href="https://wa.me/918607777717" class="btn whatsapp">WhatsApp</a>
-        <a href="https://maps.app.goo.gl/sgPDD6f7FQgqTe2B7" class="btn map">Directions</a>
+    <div class="btns">
+        <a href="tel:8607777717">Call</a>
+        <a href="https://wa.me/918607777717">WhatsApp</a>
     </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Hitech Mobile Repair</p>
-</footer>
-
 <!-- FLOATING -->
-<a href="https://wa.me/918607777717" class="floating">
-    <i class="fab fa-whatsapp"></i>
-</a>
+<a href="https://wa.me/918607777717" class="float">💬</a>
 
 <script src="script.js"></script>
 </body>
