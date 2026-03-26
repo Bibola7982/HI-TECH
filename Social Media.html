@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Follow Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: block;
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .instagram { background: #e1306c; }
+    .facebook { background: #1877f2; }
+    .youtube { background: #ff0000; }
+    .twitter { background: #1da1f2; }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Follow Us</h1>
+
+  <a class="btn instagram" href="https://www.instagram.com/hitechmobile77?igsh=czhzMGxtam56ZXJv" target="_blank">Follow on Instagram</a>
+  <a class="btn facebook" href="https://www.facebook.com/share/1BgjXc38y1/" target="_blank">Follow on Facebook</a>
+  <a class="btn youtube" href="https://www.youtube.com/@NaveenTechWala" target="_blank">Subscribe on YouTube</a>
+  <a class="btn twitter" href="#" target="_blank">Follow on Twitter</a>
+</div>
+
+<script>
+  // Example JS (optional alert)
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      console.log('Button clicked:', btn.textContent);
+    });
+  });
+</script>
+
+</body>
+</html>
